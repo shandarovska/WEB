@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pizza</title>
+        <meta charset = "utf-8">
+        <title>Ordering...</title>
     </head>
+    
+    <body><center>
+        <h1>Order pizza!</h1>
+        
+        <form method = "post" action = "ordered.html">
+            <input type = "hidden" name = "recipient" value = "https://pizzajakomo.com/">
+            <input type = "hidden" name = "subject" value = "Ordering pizza">
+            <input type = "hidden" name = "redirect" value = "main.html"> 
+
+            <p><strong>Select pizza size:</strong><br>
+                <input type="radio" name="size" value="big" checked>Big<br>
+                <input type="radio" name="size" value="medium">Medium<br>
+                <input type="radio" name="size" value="small">Small<br>
+            </p>
+            
+            <p><strong>Select the crust type:</strong><br>
+            <select>
+                <option value = "Deep dish">Deep dish</option>
+                <option value = "Thin crust">Thin crust</option>
+                <option value = "Filled with cheese">Filled with cheese</option>
+                <option value = "Gluten free">Gluten free</option>
+            </select></p>
+
+            <p><strong>Select the filler:</strong><br>
+            <input type = "checkbox" name = "filler" value = "Sausage">Sausage<br>
+            <input type = "checkbox" name = "filler" value = "Pepper">Pepper<br>
+            <input type = "checkbox" name = "filler" value = "Mushrooms">Mushrooms<br>
+            </p>
+
+            <p>
+                <label><strong>Name:</strong>
+                    <input name = "Name" type = "text" size = "20" maxlength = "30">
+                </label><br>
+                <label><strong>Phone:</strong>
+                    <input name = "Phone" type = "tel" size = "20" maxlength = "30">
+                </label><br>
+                <textarea name = "Message:" rows = "3" cols = "30" placeholder = "Message:"></textarea>
+            </p>
+            
+            <input type = "submit" value = "Send">
+            <input type = "reset" value = "Clear">
+            
+        </form>
+    </center>
+    </body>
 </html>
